@@ -1,0 +1,39 @@
+@import "../../../scss/main.scss";
+
+$buttonBGColor: #FF8B37;
+$buttonColor: #fff;
+
+.button {
+  position: relative;
+  background-color: $buttonBGColor;
+  color: $buttonColor;
+  display: block;
+  height: 64px;
+  min-width: 296px;
+  line-height: 64px;
+  padding: 0px 25px;
+  border-radius: 12px;
+  box-shadow: $shadow;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: lighten($buttonBGColor, 10%);
+  }
+
+  &:active {
+    background-color: darken($buttonBGColor, 15%);
+  }
+
+  @media (max-width: $md3+px) {
+    height: 48px;
+    line-height: 48px;
+  }
+
+  @media (max-width: $md4+px) {
+    width: 100%;
+  }
+
+}

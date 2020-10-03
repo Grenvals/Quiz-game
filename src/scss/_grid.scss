@@ -1,0 +1,21 @@
+// Grid
+
+#root {
+  width: 100%;
+  min-height: 100%;
+  height: 1px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1140+px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+
+  @media (max-width:$md3+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
