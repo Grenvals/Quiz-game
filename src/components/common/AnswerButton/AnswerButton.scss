@@ -1,0 +1,84 @@
+@import "../../../scss/main.scss";
+
+$buttonBGColor: #FF8B37;
+$buttonColor: #fff;
+$strokeCorrectColor: #47D867;
+$strokeWrongColor: #EC6259;
+$strokeUnactiveColor: #D0D0D8;
+$fillActiveColor: #FFF3EB;
+$fillCorrectColor:#E6FAEA;
+$fillWrongColor:#FDEEED;
+
+.answerButton {
+  display: block;
+  background: none;
+  padding: 0px;
+  position: relative;
+  width: 421px;
+  outline: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    .answerButton__img {
+      stroke: $buttonBGColor;
+    }
+  }
+
+  &:active {
+    .answerButton__img {
+      fill: $fillActiveColor;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: inline-block;
+    stroke: $strokeUnactiveColor;
+    fill: transparent;
+    transition: fill 0.2s;
+    transition: stroke 0.2s;
+
+    &_correct {
+      stroke: $strokeCorrectColor;
+      fill: $fillCorrectColor;
+    }
+
+    &_wrong {
+      stroke: $strokeWrongColor;
+      fill: $fillWrongColor;
+    }
+  }
+
+  &__content {
+    @include flexbox();
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-55%);
+  }
+
+  &__id {
+    font-size: 20px;
+    font-weight: 600;
+    color: $buttonBGColor;
+    margin-right: 10px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 14;
+    max-height: 50px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  @media (max-width: $md3+px) {
+    height: 48px;
+    line-height: 48px;
+  }
+}
