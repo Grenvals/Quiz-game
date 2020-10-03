@@ -1,0 +1,54 @@
+@import "../../../scss/main.scss";
+
+$activeColor: #FF8B37;
+$inactiveColor: #D0D0D8;
+
+.questionIndicator {
+  display: block;
+  background: none;
+  padding: 0px;
+  position: relative;
+  width: 421px;
+  outline: none;
+  transition: background-color 0.2s;
+
+  &_active {
+    .questionIndicator__img {
+      stroke: $activeColor;
+    }
+
+    .questionIndicator__value {
+      color: $activeColor;
+    }
+  }
+
+  &_inactive {
+    .questionIndicator__value {
+      color: $inactiveColor;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: inline-block;
+    stroke: $inactiveColor;
+    fill: transparent;
+    transition: fill 0.2s;
+    transition: stroke 0.2s;
+  }
+
+  &__value {
+    @include flexbox();
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-55%) translateX(-50%);
+    font-size: 20px;
+    text-align: center;
+
+    @media (max-width: $md3+px) {
+      font-size: 14px;
+    }
+  }
+}
