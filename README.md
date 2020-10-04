@@ -1,10 +1,14 @@
 # [Quiz game](https://quiz-game-lemon.vercel.app/)
 
-![title](https://user-images.githubusercontent.com/40334272/95010790-d960d500-0634-11eb-9664-2b0447a1e32d.png)
-![Architecture](https://user-images.githubusercontent.com/40334272/95010788-d8c83e80-0634-11eb-89c0-5a932a8c8484.png)
+![title](https://user-images.githubusercontent.com/40334272/95118237-9f85f080-0752-11eb-9750-c88ec799114f.png)
+
+## 🌎 [Architecture](https://www.figma.com/file/UDRBo24svrulzgGRmlmBZT/Quiz-Game-Architecture?node-id=0%3A1)
+  Architecture - [Figma](https://www.figma.com/file/UDRBo24svrulzgGRmlmBZT/Quiz-Game-Architecture?node-id=0%3A1).
+![Arch](https://user-images.githubusercontent.com/40334272/95118235-9e54c380-0752-11eb-8752-6726c9e09aa4.png)
+
 ## 🌎 [Demo online](https://quiz-game-lemon.vercel.app/) (vercel)
 
-  Додаток онлайн - [Quiz game](https://geo-info.vercel.app/).
+  Додаток онлайн - [Quiz game](https://quiz-game-lemon.vercel.app/).
 
 ## 📂 Folder structure 
 
@@ -46,9 +50,9 @@
 ```
 ## 💻 Technology stack
 - ### ARCHITECTURE 
-   - UI(React), BLL(Redux), DAL(Redux-Saga).
+   - UI(React), BLL(Redux), DAL(Redux-Saga), TypeScript.
 - ### Shell  
-   - Збірка на основі webpack + babel, з можливістю поступової інтеграції TypeScript.
+   - Збірка на основі webpack + babel + typescript. Налаштований eslint + prettier(airbnb). Автоматична перевірка при створенні коміту - husky. 
 - ### LAYOUT  
    - Для стилізації використовував sass + BEM. Для зручного комбінування класів підключив бібліотеку classnames.
 - ### STORE 
@@ -57,7 +61,7 @@
    - Для того щоб мати можливість створювати асинхронні action, сайд ефекти, підключив redux-saga.  
 
 ## 🚀 Getting Started (development)
-###[Demo online ](http://test.grenvalz.kl.com.ua/main)
+###[Demo online ](https://quiz-game-lemon.vercel.app)
 
 You can run aplication on your local dev environment in 5 minutes with these steps:
 1. **Install Node.js** [download](https://nodejs.org/en/). 
