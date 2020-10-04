@@ -8,7 +8,7 @@ $inactiveColor: #D0D0D8;
   background: none;
   padding: 0px;
   position: relative;
-  width: 421px;
+  width: 100%;
   outline: none;
   transition: background-color 0.2s;
 
@@ -46,6 +46,7 @@ $inactiveColor: #D0D0D8;
     transform: translateY(-55%) translateX(-50%);
     font-size: 20px;
     text-align: center;
+    min-width: 100px;
 
     @media (max-width: $md3+px) {
       font-size: 14px;

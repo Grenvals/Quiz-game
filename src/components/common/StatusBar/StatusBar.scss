@@ -1,0 +1,17 @@
+@import "../../../scss/main.scss";
+
+$backgroundColor: #F5F5F7;
+
+.statusBar {
+  height: 100%;
+  @include flexbox();
+  align-items: center;
+
+  &__list {
+    width: 100%;
+
+    &>* {
+      margin-bottom: 7px;
+    }
+  }
+}

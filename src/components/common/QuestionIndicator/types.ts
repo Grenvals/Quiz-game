@@ -1,4 +1,4 @@
 export interface QuestionIndicatorPropsType {
-  value: string;
-  status?: 'active' | 'inactive';
+  value: number;
+  status: 'active' | 'inactive' | 'default';
 }
