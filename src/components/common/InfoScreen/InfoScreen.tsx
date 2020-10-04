@@ -9,6 +9,7 @@ import './InfoScreen.scss';
 const InfoScreen: React.FC<InfoScreenType> = ({
   title = 'title',
   subtitle,
+  buttonName,
   bgColor = 'pink',
   imageUrl,
   onButtonClick,
@@ -28,7 +29,7 @@ const InfoScreen: React.FC<InfoScreenType> = ({
         <div className="infoScreen__content">
           {subtitle && <h2 className="infoScreen__subtitle">Score</h2>}
           <h1 className="infoScreen__title">{title}</h1>
-          <Button className="infoScreen__button" onClick={handleButtonClick} />
+          <Button className="infoScreen__button" name={buttonName} onClick={handleButtonClick} />
         </div>
       </div>
     </div>

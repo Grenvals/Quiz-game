@@ -5,5 +5,5 @@ export interface StatusBarPropsType {
 export type QuestionType = {
   id: string,
   reward: number,
-  status: 'active' | 'inactive' | 'default',
+  status: 'active' | 'inactive' | 'default' | any,
 };

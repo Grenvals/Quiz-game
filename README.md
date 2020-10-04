@@ -1,17 +1,10 @@
-# [GeoInfo](https://ukrainedn.herokuapp.com/)
+# [Quiz game](https://ukrainedn.herokuapp.com/)
 
-Geographic information system(GIS) where you can combine and monitor different geodata.
-
-![review](https://user-images.githubusercontent.com/40334272/94373473-81930d00-010e-11eb-87b2-08c9d24173cc.png)
-
-## [Review](https://www.youtube.com/watch?v=_H1fAfAuQLM)
-[![Review](https://user-images.githubusercontent.com/40334272/94373616-39c0b580-010f-11eb-9b60-ce61c8a5ff1c.png)](https://www.youtube.com/watch?v=_H1fAfAuQLM)
-
-Geographic information system(GIS) where you can combine and monitor different geodata. Display geodata from SpaceX and NASA, the position of satellites(Starlink), ISS. Topographic maps, air pollution, atmospheric parameters, and more.
-
+![title](https://user-images.githubusercontent.com/40334272/95010790-d960d500-0634-11eb-9664-2b0447a1e32d.png)
+![Architecture](https://user-images.githubusercontent.com/40334272/95010788-d8c83e80-0634-11eb-89c0-5a932a8c8484.png)
 ## 🌎 [Demo online](https://geo-info.vercel.app/) (vercel)
 
-  Додаток онлайн - [GeoInfo](https://geo-info.vercel.app/).
+  Додаток онлайн - [Quiz game](https://geo-info.vercel.app/).
 
 ## 📂 Folder structure 
 
@@ -62,11 +55,6 @@ Geographic information system(GIS) where you can combine and monitor different g
 - ### API  
    - Для того щоб мати можливість створювати асинхронні action, сайд ефекти, підключив redux-saga.  
 
- ## 💻 FUNCTIONAL
- - ### **SPACE** 
-   - *Відображення масиву супутників Starlink(оновлення кожних 10хв), площі покриття зв'язком, кількість виведених на орбіту, детальну інформацію про кожний супутник.*
-   - *Відображення МКС в режимі реального часу, пройденої траекторії, зони видимості з землі.*
-
 ## 🚀 Getting Started (development)
 ###[Demo online ](http://test.grenvalz.kl.com.ua/main)
 
@@ -90,9 +78,8 @@ You can run aplication on your local dev environment in 5 minutes with these ste
    yarn start
    
    ```
-![Screenshot_1](https://user-images.githubusercontent.com/40334272/92362988-780f1a00-f0f9-11ea-879f-77af2b98dd37.png)
 
  ## 📷 Screenshots
-![s1](https://user-images.githubusercontent.com/40334272/94373474-822ba380-010e-11eb-8905-2486f99d01b9.png)
+![title](https://user-images.githubusercontent.com/40334272/95010790-d960d500-0634-11eb-9664-2b0447a1e32d.png)
 
 

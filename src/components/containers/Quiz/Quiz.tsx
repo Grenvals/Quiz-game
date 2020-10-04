@@ -241,6 +241,7 @@ const Quiz: React.FC = () => {
       {isStart === false && (
         <InfoScreen
           title="Who wants to be a millionaire?"
+          buttonName="Start"
           imageUrl={modalIcon}
           onButtonClick={onStartHandler}
           bgColor="pink"
@@ -250,6 +251,7 @@ const Quiz: React.FC = () => {
         <InfoScreen
           title={`$${totalReward} earned`}
           subtitle="Total score:"
+          buttonName="Try again"
           imageUrl={modalIcon}
           onButtonClick={onResetHandler}
           bgColor="pink"
