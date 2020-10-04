@@ -12,13 +12,14 @@
    ├── dist                      /* generate build in production mode
    └── public                    /* static files
    |     ├── index.html          /* change title and static html here
+   |     ├── config.json         /* configuration quiz
    |     └── favicon
    └── src 
    |     └── assets              /* images, fonts, additional files
    |      ...   
    |     ├── components          /* react components  
-   |          └── common         /* reusable react components       
-   |     ├── hooks               /* custom react hooks        
+   |          ├── containers     /* containers component
+   |          └── common         /* reusable react components              
    |     └── store               /* store  
    |          ├── api            /* api
    |          ├── sagas          /* redux-saga generators
@@ -27,8 +28,8 @@
    |          ├── reducers       /* reducers
    |          ├── selectors      /* selectors
    |          ├── state          /* initial state
-   |          ├── types          /* typescript types
-   |          └── store.js       /* create store         
+   |          ├── store.js       /* create store  
+   |     ├── types               /* typescript types     
    |     ├── scss                /* general style, reset & normalaize
    |     ├── utils               /* utils, handlers
    |     ├── App.js              /* general component, router

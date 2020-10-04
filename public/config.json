@@ -1,0 +1,148 @@
+{
+	"questionsList": [
+    {
+      "id": "1",
+      "title": "Everything in React is a ______",
+      "answersList": [
+        { "id": "A", "name": "Module" },
+        { "id": "B", "name": "Component" },
+        { "id": "C", "name": "Package" },
+        { "id": "D", "name": "Class" }
+      ],
+      "rightAnswer": "B",
+      "reward": 500
+    },
+    {
+      "id": "2",
+      "title": "In which directory React Components are saved?",
+      "answersList": [
+        { "id": "A", "name": "Inside js/components/" },
+        { "id": "B", "name": "Inside vendor/components/" },
+        { "id": "C", "name": "Inside external/components/" },
+        { "id": "D", "name": "Inside vendor/" }
+      ],
+      "rightAnswer": "A",
+      "reward": 1000
+    },
+    {
+      "id": "3",
+      "title": "What is Babel?",
+      "answersList": [
+        { "id": "A", "name": "A transpiler" },
+        { "id": "B", "name": "An interpreter" },
+        { "id": "C", "name": "A Compiler" },
+        { "id": "D", "name": "Both Compiler and Transpilar" }
+      ],
+      "rightAnswer": "D",
+      "reward": 2000
+    },
+    {
+      "id": "4",
+      "title": "How many elements does a react component return?",
+      "answersList": [
+        { "id": "A", "name": "2 Elements" },
+        { "id": "B", "name": "1 Element" },
+        { "id": "C", "name": "Multiple Elements" },
+        { "id": "D", "name": "None of These" }
+      ],
+      "rightAnswer": "C",
+      "reward": 4000
+    },
+    {
+      "id": "5",
+      "title": "What is React?",
+      "answersList": [
+        { "id": "A", "name": "Server side Framework" },
+        { "id": "B", "name": "User-interface framework" },
+        { "id": "C", "name": "A Library for building interaction interfaces" },
+        { "id": "D", "name": "None of These" }
+      ],
+      "rightAnswer": "C",
+      "reward": 8000
+    },
+    {
+      "id": "6",
+      "title": "In React what is used to pass data to a component from outside?",
+      "answersList": [
+        { "id": "A", "name": "setState" },
+        { "id": "B", "name": "render with arguments" },
+        { "id": "C", "name": "props" },
+        { "id": "D", "name": "PropTypes" }
+      ],
+      "rightAnswer": "C",
+      "reward": 16000
+    },
+    {
+      "id": "7",
+      "title": "Props are _____ into other components",
+      "answersList": [
+        { "id": "A", "name": "Methods" },
+        { "id": "B", "name": "Injected" },
+        { "id": "C", "name": "Both 1 & 2" },
+        { "id": "D", "name": "All of the above" }
+      ],
+      "rightAnswer": "C",
+      "reward": 32000
+    },
+    {
+      "id": "8",
+      "title": "What is React.js in MVC?",
+      "answersList": [
+        { "id": "A", "name": "Middleware" },
+        { "id": "B", "name": "Controller" },
+        { "id": "C", "name": "Model" },
+        { "id": "D", "name": "Router" }
+      ],
+      "rightAnswer": "B",
+      "reward": 64000
+    },
+    {
+      "id": "9",
+      "title": "React.js uses ___ to increase performance",
+      "answersList": [
+        { "id": "A", "name": "Original DOM" },
+        { "id": "B", "name": "Virtual DOM" },
+        { "id": "C", "name": "Both 1 & 2" },
+        { "id": "D", "name": "None of above" }
+      ],
+      "rightAnswer": "B",
+      "reward": 125000
+    },
+    {
+      "id": "10",
+      "title": "Keys are given to a list of elements in react. These keys should be - ",
+      "answersList": [
+        { "id": "A", "name": "Do not requires to be unique" },
+        { "id": "B", "name": "Unique in the DOM" },
+        { "id": "C", "name": "Unique among the siblings only" },
+        { "id": "D", "name": "All of the above" }
+      ],
+      "rightAnswer": "C",
+      "reward": 250000
+    },
+    {
+      "id": "11",
+      "title": "Who Develop React.js?",
+      "answersList": [
+        { "id": "A", "name": "Apple" },
+        { "id": "B", "name": "Facebook" },
+        { "id": "C", "name": "Twitter" },
+        { "id": "D", "name": "Google" }
+      ],
+      "rightAnswer": "B",
+      "reward": 500000
+    },
+    {
+      "id": "12",
+      "title": "..... helps react for keeping their data unidirectional.",
+      "answersList": [
+        { "id": "A", "name": "JSX" },
+        { "id": "B", "name": "Flux" },
+        { "id": "C", "name": "Dom" },
+        { "id": "D", "name": "Props" }
+      ],
+      "rightAnswer": "B",
+      "reward": 1000000
+    }
+  ]
+}

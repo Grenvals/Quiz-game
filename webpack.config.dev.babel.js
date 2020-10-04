@@ -106,11 +106,11 @@ module.exports = {
       filename: './index.html',
       template: './public/index.html',
     }),
-    new CopyWebpackPlugin([{ from: './public', to: 'dist', ignore: ['./public/index.html'] }]),
+    new CopyWebpackPlugin([{ from: './public', to: './', ignore: ['./public/index.html'] }]),
   ],
   devServer: {
     inline: true,
-    contentBase: './dist',
+    contentBase: 'dist',
     port: 5000,
     historyApiFallback: true,
   },

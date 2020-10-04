@@ -1,12 +1,5 @@
-export interface ConfigAPIType {
-  id: string;
-  title: string;
-  answersList: Array<AnswerType>;
-  rightAnswer: string;
-  reward: number;
-}
+import { QuestionsListType } from '../types/types';
 
-export type AnswerType = {
-  id: string,
-  name: string,
-};
+export interface ConfigAPIType {
+  questionsList: Array<QuestionsListType>;
+}

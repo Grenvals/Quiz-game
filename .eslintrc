@@ -3,20 +3,10 @@
     "airbnb-typescript-prettier" 
   ],
   "rules": {
-    // "no-alert": "warn",
     "no-console": "off",
-    // "no-unused-vars": "warn",
-    // "no-unused-expressions": "warn",
-    // "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "warn",
-    // "react-hooks/exhaustive-deps": "warn",
-    // "guard-for-in": "warn",
     "import/prefer-default-export": "off",
-    "react/self-closing-comp": "off"
-    // "jsx-a11y/control-has-associated-label": "off",
-    // "no-restricted-syntax": "off",
-    // "consistent-return": "off",
-    // "no-shadow": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/self-closing-comp": "off",
+    "no-shadow": "off"
   }
 }
