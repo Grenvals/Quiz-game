@@ -15,3 +15,7 @@ export const getIsFinished = (state: RootStateType): boolean => {
 export const getTotalReward = (state: RootStateType): number => {
   return state.quiz.totalReward;
 };
+
+export const getActiveQuestion = (state: RootStateType): number => {
+  return state.quiz.activeQuestion;
+};

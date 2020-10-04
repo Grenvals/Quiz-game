@@ -5,6 +5,7 @@ import {
   SET_QUIZ_CONFIG,
   SET_TOTAL_REWARD,
   RESET_QUIZ,
+  SET_ACTIVE_QUESTION,
 } from '../constants/constants';
 
 import { QuestionsListType } from '../../types/types';
@@ -37,6 +38,12 @@ interface setTotalRewardType {
   type: typeof SET_TOTAL_REWARD;
   payload: {
     totalReward: number,
+  };
+}
+interface setActiveQuestionType {
+  type: typeof SET_ACTIVE_QUESTION;
+  payload: {
+    activeQuestion: number,
   };
 }
 interface resetQuizType {
@@ -74,6 +81,13 @@ export const setTotalReward = (totalReward: number): setTotalRewardType => ({
   },
 });
 
+export const setActiveQuestion = (activeQuestion: number): setActiveQuestionType => ({
+  type: SET_ACTIVE_QUESTION,
+  payload: {
+    activeQuestion,
+  },
+});
+
 export const resetQuiz = (): resetQuizType => ({
   type: RESET_QUIZ,
 });
@@ -84,4 +98,5 @@ export type QuizActionTypes =
   | setIsStartType
   | setIsFinishedType
   | setTotalRewardType
+  | setActiveQuestionType
   | resetQuizType;

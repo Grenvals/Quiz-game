@@ -9,44 +9,42 @@ import { QuizPropsType } from './types';
 
 import './Quiz.scss';
 
-const Quiz: React.FC<QuizPropsType> = ({ questionsList, setTotalReward, onFinished }) => {
+const Quiz: React.FC<QuizPropsType> = ({
+  questionsList,
+  activeQuestion,
+  onChangeActiveQuestion,
+  setTotalReward,
+  onFinished,
+}) => {
   const [isSidebarActive, setIsSidebarActive] = useState<boolean>(false);
   const [answerCurrentState, setAnswerCurrentState] = useState<any>(null);
-
-  const [activeQuestion, setActiveQuestion] = useState(0);
-
-  const isQuizFinished = () => activeQuestion + 1 === questionsList.length;
 
   const onSidebarActiveHandler = (): void => {
     setIsSidebarActive(isSidebarActive === false);
   };
 
+  const onChangeAnswerLocalState = (id: string, status: string) => {
+    setAnswerCurrentState({ id, status });
+  };
+
+  const isQuizFinished = () => activeQuestion + 1 === questionsList.length;
+
   const onSelectAnswerHandler = (id: string) => {
     const question = questionsList[activeQuestion];
-    if (answerCurrentState !== null) {
-      return;
-    }
 
     if (question.rightAnswer === id) {
       setTotalReward(questionsList[activeQuestion].reward);
-      setAnswerCurrentState({
-        id,
-        status: 'correct',
-      });
-
+      onChangeAnswerLocalState(id, 'correct');
       setTimeout(() => {
         if (isQuizFinished()) {
           onFinished(true);
         } else {
-          setActiveQuestion(activeQuestion + 1);
+          onChangeActiveQuestion(activeQuestion + 1);
           setAnswerCurrentState(null);
         }
       }, 1000);
     } else {
-      setAnswerCurrentState({
-        id,
-        status: 'wrong',
-      });
+      onChangeAnswerLocalState(id, 'wrong');
       setTimeout(() => {
         onFinished(true);
       }, 1000);

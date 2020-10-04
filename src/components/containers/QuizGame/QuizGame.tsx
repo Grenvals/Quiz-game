@@ -2,38 +2,41 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { InfoScreen } from '../../common/InfoScreen/InfoScreen';
+import { Quiz } from '../Quiz/Quiz';
 
-import modalIcon from '../../../assets/img/modal/hand.svg';
-
+import { RootStateType } from '../../../types/types';
+import { QuizPropsType } from './types';
 import {
   getQuizConfig,
   setIsStart,
   setIsFinished,
   setTotalReward,
+  setActiveQuestion,
   resetQuiz,
 } from '../../../store/actions/actions';
 import {
+  getActiveQuestion,
   getIsFinished,
   getIsStart,
   getQuestionsList,
   getTotalReward,
 } from '../../../store/selectors/selectors';
 
-import { RootStateType } from '../../../types/types';
-import { QuizPropsType } from './types';
+import modalIcon from '../../../assets/img/modal/hand.svg';
 
 import './QuizGame.scss';
-import { Quiz } from '../Quiz/Quiz';
 
 const QuizGame: React.FC<QuizPropsType> = ({
   questionsList,
   isStart,
   isFinished,
   totalReward,
+  activeQuestion,
   getQuizConfig,
   setIsStart,
   setIsFinished,
   setTotalReward,
+  setActiveQuestion,
   resetQuiz,
 }) => {
   useEffect(() => {
@@ -54,7 +57,9 @@ const QuizGame: React.FC<QuizPropsType> = ({
         <Quiz
           questionsList={questionsList}
           setTotalReward={setTotalReward}
+          activeQuestion={activeQuestion}
           onFinished={setIsFinished}
+          onChangeActiveQuestion={setActiveQuestion}
         />
       )}
       {isStart === false && (
@@ -86,6 +91,7 @@ const mapStateToProps = (state: RootStateType) => {
     isStart: getIsStart(state),
     isFinished: getIsFinished(state),
     totalReward: getTotalReward(state),
+    activeQuestion: getActiveQuestion(state),
   };
 };
 
@@ -94,6 +100,7 @@ const QuizGameContainer = connect(mapStateToProps, {
   setIsStart,
   setIsFinished,
   setTotalReward,
+  setActiveQuestion,
   resetQuiz,
 })(QuizGame);
 

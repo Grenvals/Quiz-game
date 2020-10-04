@@ -36,7 +36,25 @@ $fillWrongColor:#FDEEED;
     }
   }
 
-  .answerButton__img {
+  &_correct,
+  &_correct:hover {
+    .answerButton__img {
+      stroke: $strokeCorrectColor;
+      fill: $fillCorrectColor;
+    }
+
+  }
+
+  &_wrong,
+  &_wrong:hover {
+    .answerButton__img {
+      stroke: $strokeWrongColor;
+      fill: $fillWrongColor;
+    }
+
+  }
+
+  &__img {
     width: 100%;
     display: block;
     stroke: $strokeUnactiveColor;
@@ -44,17 +62,6 @@ $fillWrongColor:#FDEEED;
     transition: fill 0.2s;
     transition: stroke 0.2s;
 
-    &_correct,
-    &_correct:hover {
-      stroke: $strokeCorrectColor;
-      fill: $fillCorrectColor;
-    }
-
-    &_wrong,
-    &_wrong:hover {
-      stroke: $strokeWrongColor;
-      fill: $fillWrongColor;
-    }
   }
 
   &__content {

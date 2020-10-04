@@ -12,7 +12,6 @@ export type AnswerType = {
 };
 
 export type QuizInitialStateType = {
-  isSidebarActive: boolean,
   activeQuestion: number,
   isStart: boolean,
   isFinished: boolean,

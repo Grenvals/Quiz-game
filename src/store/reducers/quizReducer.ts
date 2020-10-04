@@ -4,6 +4,7 @@ import {
   SET_IS_START,
   SET_QUIZ_CONFIG,
   SET_TOTAL_REWARD,
+  SET_ACTIVE_QUESTION,
 } from '../constants/constants';
 import { QuizInitialStateType } from '../../types/types';
 import { QuizActionTypes } from '../actions/actions';
@@ -35,6 +36,12 @@ const quizReducer = (state = quizInitialState, action: QuizActionTypes): QuizIni
         totalReward: action.payload.totalReward,
       };
     }
+    case SET_ACTIVE_QUESTION: {
+      return {
+        ...state,
+        activeQuestion: action.payload.activeQuestion,
+      };
+    }
     case RESET_QUIZ: {
       return {
         ...state,
@@ -42,7 +49,6 @@ const quizReducer = (state = quizInitialState, action: QuizActionTypes): QuizIni
         activeQuestion: 0,
         isStart: false,
         isFinished: false,
-        isSidebarActive: false,
       };
     }
     default:
