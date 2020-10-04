@@ -1,8 +1,8 @@
 export interface InfoScreenType {
   title?: string;
-  subtitle?: string;
   bgColor?: string;
-  buttonName?: string;
   imageUrl: string;
+  subtitle?: string;
+  buttonName?: string;
   onButtonClick(): void;
 }

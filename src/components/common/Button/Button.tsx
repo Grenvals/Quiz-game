@@ -7,8 +7,8 @@ import './Button.scss';
 
 const Button: React.FC<ButtonPropsType> = ({
   name = 'Submit',
-  disabled = false,
   onClick,
+  disabled = false,
   className,
 }) => {
   const handleClick = () => {

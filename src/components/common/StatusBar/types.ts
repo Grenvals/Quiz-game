@@ -1,4 +1,6 @@
 export interface StatusBarPropsType {
+  className?: any;
+  isActive?: boolean;
   questionsList: Array<QuestionType>;
 }
 

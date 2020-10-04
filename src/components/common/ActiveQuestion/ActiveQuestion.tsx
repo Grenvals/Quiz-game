@@ -1,15 +1,16 @@
 import React from 'react';
+import cn from 'classnames';
 
 import { ActiveQuestionPropsType, AnswerType } from './types';
-
 import { AnswerButton } from '../AnswerButton/AnswerButton';
 
 import './ActiveQuestion.scss';
 
 const ActiveQuestion: React.FC<ActiveQuestionPropsType> = ({
   title,
-  answersList,
   onSelect,
+  className,
+  answersList,
   answerCurrentState,
 }) => {
   const answers = answersList.map((i: AnswerType) => {
@@ -23,7 +24,7 @@ const ActiveQuestion: React.FC<ActiveQuestionPropsType> = ({
   });
 
   return (
-    <div className="activeQuestion">
+    <div className={cn('activeQuestion', { [className]: className })}>
       <h1 className="activeQuestion__title">{title}</h1>
       <div className="activeQuestion__answers">
         <ul className="activeQuestion__list">{answers}</ul>

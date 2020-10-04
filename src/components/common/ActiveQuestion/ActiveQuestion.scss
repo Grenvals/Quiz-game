@@ -11,6 +11,10 @@ $backgroundColor: #F5F5F7;
   background-color: $backgroundColor;
   padding: 8% 10%;
 
+  @media (max-width: $md2+px) {
+    padding: 50px 30px;
+  }
+
   &__title {
     font-size: 32px;
     font-weight: 600;
@@ -20,9 +24,19 @@ $backgroundColor: #F5F5F7;
     @include flexbox();
     flex-wrap: wrap;
 
+    @media (max-width: $md3+px) {
+      display: block;
+    }
+
     &>* {
       flex: 1 1 50%;
       margin-bottom: 15px;
+
+      @media (max-width: $md3+px) {
+        margin: 0 -35px;
+        margin-bottom: 35px;
+      }
+
     }
   }
 }

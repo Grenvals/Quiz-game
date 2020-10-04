@@ -1,9 +1,10 @@
 export interface ActiveQuestionPropsType {
   title: string;
-  answersList: Array<AnswerType>;
   status?: 'correct' | 'wrong';
-  onSelect(id: string): void;
+  className?: any;
+  answersList: Array<AnswerType>;
   answerCurrentState?: AnswerCurrentStateType;
+  onSelect(id: string): void;
 }
 
 export type AnswerType = {

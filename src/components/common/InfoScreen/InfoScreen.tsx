@@ -8,10 +8,10 @@ import './InfoScreen.scss';
 
 const InfoScreen: React.FC<InfoScreenType> = ({
   title = 'title',
-  subtitle,
-  buttonName,
   bgColor = 'pink',
   imageUrl,
+  subtitle,
+  buttonName,
   onButtonClick,
 }) => {
   const handleButtonClick = () => {

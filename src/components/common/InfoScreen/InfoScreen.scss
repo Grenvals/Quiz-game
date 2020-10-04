@@ -1,5 +1,9 @@
 @import "../../../scss/main.scss";
 
+$color: #a5a5a5;
+$background: #FFF;
+$backgroundDark: #FFF3EB;
+
 .infoScreen {
   @include flexbox();
   align-items: center;
@@ -15,11 +19,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #FFF;
+    background: $background;
     padding: 15px;
 
     &_pink {
-      background: linear-gradient(to left top, #FFF3EB 50%, transparent 50%);
+      background: linear-gradient(to left top, $backgroundDark 50%, transparent 50%);
     }
   }
 
@@ -53,7 +57,7 @@
   &__subtitle {
     font-size: 32px;
     font-weight: 600;
-    color: #606064;
+    color: $color;
     margin-bottom: 2px;
 
     @media (max-width: $md2+px) {

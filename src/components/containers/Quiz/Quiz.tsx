@@ -7,9 +7,10 @@ import { StatusBar } from '../../common/StatusBar/StatusBar';
 import modalIcon from '../../../assets/img/modal/hand.svg';
 
 import './Quiz.scss';
+import { Burger } from '../../common/Burger/Burger';
 
 const Quiz: React.FC = () => {
-  // const totalReward = 0;
+  const [isSidebarActive, setIsSidebarActive] = useState<boolean>(false);
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [isStart, setIsStart] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -162,15 +163,6 @@ const Quiz: React.FC = () => {
     },
   ];
 
-  const sidebarQuestionsList = questionsList.map((q) => {
-    let status = 'default';
-    if (activeQuestion + 1 === Number(q.id)) {
-      status = 'active';
-    } else if (activeQuestion < Number(q.id)) {
-      status = 'inactive';
-    }
-    return { id: q.id, reward: q.reward, status };
-  });
   const isQuizFinished = () => {
     return activeQuestion + 1 === questionsList.length;
   };
@@ -186,6 +178,10 @@ const Quiz: React.FC = () => {
     setActiveQuestion(0);
   };
 
+  const onSidebarActiveHandler = (): void => {
+    setIsSidebarActive(isSidebarActive === false);
+  };
+
   const onSelectAnswerHandler = (id: string) => {
     const question = questionsList[activeQuestion];
     if (answerCurrentState !== null) {
@@ -193,49 +189,64 @@ const Quiz: React.FC = () => {
     }
 
     if (question.rightAnswer === id) {
-      setTotalReward(totalReward + questionsList[activeQuestion].reward);
+      setTotalReward(questionsList[activeQuestion].reward);
       setAnswerCurrentState({
         id,
         status: 'correct',
       });
 
-      const timout = window.setTimeout(() => {
+      const timout = setTimeout(() => {
         if (isQuizFinished()) {
-          console.log('finished');
           setIsFinished(true);
         } else {
           setActiveQuestion(activeQuestion + 1);
           setAnswerCurrentState(null);
         }
-        window.clearTimeout(timout);
+        clearTimeout(timout);
       }, 1000);
     } else {
       setAnswerCurrentState({
         id,
         status: 'wrong',
       });
-      const timout = window.setTimeout(() => {
+      const timout = setTimeout(() => {
         setIsFinished(true);
-        window.clearTimeout(timout);
+        clearTimeout(timout);
       }, 1000);
     }
   };
+
+  const sidebarQuestionsList = questionsList.map((q) => {
+    let status = 'default';
+    if (activeQuestion + 1 === Number(q.id)) {
+      status = 'active';
+    } else if (activeQuestion < Number(q.id)) {
+      status = 'inactive';
+    }
+    return { id: q.id, reward: q.reward, status };
+  });
 
   return (
     <>
       {isStart === true && isFinished === false && (
         <div className="quiz">
-          <div className="quiz__question">
-            <ActiveQuestion
-              title={questionsList[activeQuestion].title}
-              answersList={questionsList[activeQuestion].answersList}
-              onSelect={onSelectAnswerHandler}
-              answerCurrentState={answerCurrentState}
-            />
-          </div>
-          <div className="quiz__sidebar">
-            <StatusBar questionsList={sidebarQuestionsList} />
-          </div>
+          <ActiveQuestion
+            className="quiz__question"
+            title={questionsList[activeQuestion].title}
+            answersList={questionsList[activeQuestion].answersList}
+            onSelect={onSelectAnswerHandler}
+            answerCurrentState={answerCurrentState}
+          />
+          <StatusBar
+            className="quiz__sidebar"
+            isActive={isSidebarActive}
+            questionsList={sidebarQuestionsList}
+          />
+          <Burger
+            className="quiz__burger"
+            isActive={isSidebarActive}
+            onClick={onSidebarActiveHandler}
+          />
         </div>
       )}
       {isStart === false && (

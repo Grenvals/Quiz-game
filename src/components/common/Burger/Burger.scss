@@ -1,0 +1,50 @@
+@import "../../../scss/main.scss";
+
+$buttonColor: rgb(0, 0, 0);
+
+.burger {
+  display: none;
+  z-index: 999;
+  height: 40px;
+  width: 50px;
+  color: transparent;
+  background: transparent;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 5%;
+    border-radius: 5px;
+    background: $buttonColor;
+    left: 50%;
+    top: 50%;
+    transition: transform 0.3s;
+  }
+
+  &:before {
+    transform: translateX(-50%) translateY(-250%);
+  }
+
+  &:after {
+    transform: translateX(-50%) translateY(150%);
+  }
+
+  @media (max-width: $md3+px) {
+    display: block;
+  }
+
+  &_active {
+    &:before {
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      width: 40%;
+    }
+
+    &:after {
+      transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+      width: 40%;
+    }
+  }
+}
