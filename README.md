@@ -1,8 +1,8 @@
-# [Quiz game](https://ukrainedn.herokuapp.com/)
+# [Quiz game](https://quiz-game-lemon.vercel.app/)
 
 ![title](https://user-images.githubusercontent.com/40334272/95010790-d960d500-0634-11eb-9664-2b0447a1e32d.png)
 ![Architecture](https://user-images.githubusercontent.com/40334272/95010788-d8c83e80-0634-11eb-89c0-5a932a8c8484.png)
-## 🌎 [Demo online](https://geo-info.vercel.app/) (vercel)
+## 🌎 [Demo online](https://quiz-game-lemon.vercel.app/) (vercel)
 
   Додаток онлайн - [Quiz game](https://geo-info.vercel.app/).
 

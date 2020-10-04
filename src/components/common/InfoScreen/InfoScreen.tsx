@@ -27,7 +27,7 @@ const InfoScreen: React.FC<InfoScreenType> = ({
           <img src={imageUrl} alt="modal" />
         </div>
         <div className="infoScreen__content">
-          {subtitle && <h2 className="infoScreen__subtitle">Score</h2>}
+          {subtitle && <h2 className="infoScreen__subtitle">{subtitle}</h2>}
           <h1 className="infoScreen__title">{title}</h1>
           <Button className="infoScreen__button" name={buttonName} onClick={handleButtonClick} />
         </div>
